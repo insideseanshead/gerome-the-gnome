@@ -54,11 +54,11 @@ module.exports = function(sequelize, DataTypes) {
     })
     Class.associate = function(models) {
         // add associations here
-        Class.hasMany(models.Character,{
-            onDelete:'cascade'
-        });
+        Class.belongsToMany(models.Character);
     };
     // Class.hasMany("Character")
 
     return Class;
 }
+
+// In the routes you'd need a Character.addClass(id of the class), for post request
