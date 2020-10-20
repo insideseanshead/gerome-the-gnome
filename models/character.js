@@ -17,8 +17,8 @@ module.exports = function(sequelize, DataTypes) {
     })
     Character.associate = function(models) {
         // add associations here
-        Character.belongsTo(models.Class);
-        Character.belongsTo(models.Race);
+        Character.hasOne(models.Class);
+        Character.hasOne(models.Race);
     };
     
     // Character.belongsTo(models.Class)
