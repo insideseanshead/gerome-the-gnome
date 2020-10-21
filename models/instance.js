@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-    const Instance = sequelize.define("User", {
+    const Instance = sequelize.define("Instance", {
         notes: {
             type: DataTypes.TEXT,
         },

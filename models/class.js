@@ -7,19 +7,19 @@ module.exports = function(sequelize, DataTypes) {
         },
         saveOneName: {
             type: DataTypes.STRING,
-            allowNull: FALSE
+            allowNull: false
         },
         saveOneAtt: {
-            type: DataTypes.INT,
-            allowNull: FALSE
+            type: DataTypes.INTEGER,
+            allowNull: false
         },
         saveTwoName: {
             type: DataTypes.STRING,
-            allowNull: FALSE
+            allowNull: false
         },
         saveTwoAtt: {
-            type: DataTypes.INT,
-            allowNull: FALSE
+            type: DataTypes.INTEGER,
+            allowNull: false
         }
         // str: {
         //     // Store str scores.
@@ -72,7 +72,9 @@ module.exports = function(sequelize, DataTypes) {
     })
     Class.associate = function(models) {
         // add associations here
-        Class.belongsToMany(models.Character);
+        Class.hasMany(models.Character, {
+            onDelete: "cascade"
+        });
     };
     // Class.hasMany("Character")
 
