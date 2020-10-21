@@ -7,7 +7,9 @@ module.exports = function(sequelize, DataTypes) {
     })
     Race.associate = function(models) {
         // add associations here
-        Race.belongsToMany(models.Character);
+        Race.hasMany(models.Character, {
+            onDelete: "cascade"
+        });
     };
 
     return Race;

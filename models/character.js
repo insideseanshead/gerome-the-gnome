@@ -10,32 +10,32 @@ module.exports = function(sequelize, DataTypes) {
         },
         str: {
             // Store str scores.
-            type: DataTypes.INT,
+            type: DataTypes.INTEGER,
             allowNull: false
         },
         dex: {
             // Store dex scores.
-            type: DataTypes.INT,
+            type: DataTypes.INTEGER,
             allowNull: false
         },
         con: {
             // Store con scores.
-            type: DataTypes.INT,
+            type: DataTypes.INTEGER,
             allowNull: false
         },
         itl: {
             // Store itl scores.
-            type: DataTypes.INT,
+            type: DataTypes.INTEGER,
             allowNull: false
         },
         wis: {
             // Store wis scores.
-            type: DataTypes.INT,
+            type: DataTypes.INTEGER,
             allowNull: false
         },
         cha: {
             // Store cha scores.
-            type: DataTypes.INT,
+            type: DataTypes.INTEGER,
             allowNull: false
         }, 
         saveOneID: {
@@ -44,16 +44,16 @@ module.exports = function(sequelize, DataTypes) {
             allowNull: false
         },
         modOne: {
-            type: DataTypes.INT,
+            type: DataTypes.INTEGER,
             allowNull: false
         },
         saveTwoID: {
             // Store saveOneID scores.
-            type: DataTypes.INT,
+            type: DataTypes.INTEGER,
             allowNull: false
         },
         modTwo: {
-            type: DataTypes.INT,
+            type: DataTypes.INTEGER,
             allowNull: false
         }
         // ,
@@ -65,8 +65,8 @@ module.exports = function(sequelize, DataTypes) {
     })
     Character.associate = function(models) {
         // add associations here
-        Character.hasOne(models.Class);
-        Character.hasOne(models.Race);
+        Character.belongsTo(models.Class);
+        Character.belongsTo(models.Race);
     };
     
     // Character.belongsTo(models.Class)
