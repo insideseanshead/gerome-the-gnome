@@ -5,52 +5,70 @@ module.exports = function(sequelize, DataTypes) {
             type: DataTypes.STRING,
             allowNull: false
         },
-        str: {
-            // Store str scores.
-            type: DataTypes.INT,
-            allowNull: false
+        saveOneName: {
+            type: DataTypes.STRING,
+            allowNull: FALSE
         },
-        dex: {
-            // Store dex scores.
+        saveOneAtt: {
             type: DataTypes.INT,
-            allowNull: false
+            allowNull: FALSE
         },
-        con: {
-            // Store con scores.
-            type: DataTypes.INT,
-            allowNull: false
+        saveTwoName: {
+            type: DataTypes.STRING,
+            allowNull: FALSE
         },
-        itl: {
-            // Store itl scores.
+        saveTwoAtt: {
             type: DataTypes.INT,
-            allowNull: false
-        },
-        wis: {
-            // Store wis scores.
-            type: DataTypes.INT,
-            allowNull: false
-        },
-        cha: {
-            // Store cha scores.
-            type: DataTypes.INT,
-            allowNull: false
+            allowNull: FALSE
         }
-        // , 
+        // str: {
+        //     // Store str scores.
+        //     type: DataTypes.INT,
+        //     allowNull: false
+        // },
+        // dex: {
+        //     // Store dex scores.
+        //     type: DataTypes.INT,
+        //     allowNull: false
+        // },
+        // con: {
+        //     // Store con scores.
+        //     type: DataTypes.INT,
+        //     allowNull: false
+        // },
+        // itl: {
+        //     // Store itl scores.
+        //     type: DataTypes.INT,
+        //     allowNull: false
+        // },
+        // wis: {
+        //     // Store wis scores.
+        //     type: DataTypes.INT,
+        //     allowNull: false
+        // },
+        // cha: {
+        //     // Store cha scores.
+        //     type: DataTypes.INT,
+        //     allowNull: false
+        // }, 
         // saveOneID: {
+        //     // Store saveOneID scores.
+        //     type: DataTypes.STRING,
+        //     allowNull: false
+        // },
+        // modOne: {
+        //     type: DataTypes.INT,
+        //     allowNull: false
+        // },
+        // saveTwoID: {
         //     // Store saveOneID scores.
         //     type: DataTypes.INT,
         //     allowNull: false
         // },
-        // str: {
-        //     // Store str scores.
+        // modTwo: {
         //     type: DataTypes.INT,
         //     allowNull: false
-        // },
-        // str: {
-        //     // Store str scores.
-        //     type: DataTypes.INT,
-        //     allowNull: false
-        // },
+        // }
     })
     Class.associate = function(models) {
         // add associations here
