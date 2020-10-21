@@ -4,10 +4,23 @@
   <title>Gerome the Gnome</title>
   <meta charset="UTF-8">
   <!-- Link to materialize CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
 </head>
 
 <body>
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">Logo</a>
+      {{!-- add logo --}}
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+         <li><button><a href="./search characters">search character</a></button></li>
+        <li><button><a href="./create characters">create character</a></button></li>
+        <li><button><a href="/all characters">all character</a></button></li>
+      </ul>
+    </div>
+  </nav>
+
   {{{ body }}} 
   <!-- Jquery and base file link for script of navbar, will need other pages scripts below -->
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>

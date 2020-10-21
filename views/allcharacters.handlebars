@@ -1,0 +1,56 @@
+<div class="container">
+<h1>characters {{all characters}}</h1>
+  {{#each characters}}
+<div class="row">
+
+  <div class="col s12 m7">
+    <h2 class="header">Horizontal Card</h2>
+    <div class="card horizontal">
+      <div class="card-image">
+        <img src="">
+        {{!-- fill with our card image --}}
+      </div>
+      <div class="card-stacked">
+        <div class="card-content">
+          <h2>{{first_name}} {{last_name}}</h2>
+          <button class="delete" data-id="{{this.id}}">delete character</button>
+         <table class="responsive-table">
+                <thead>
+                <tr>
+                    <td>strength</td>
+                    <td>dexterity</td>
+                    <td>constitution</td>
+                    <td>intelligence</td>
+                    <td>wisdom</td>
+                    <td>charisma</td>
+                    
+                </tr>
+                </thead>
+
+            <tbody>
+                <tr>
+                    <th>{{this.str}}</th>
+                    <th>{{this.dex}}</th>
+                    <th>{{this.con}}</th>
+                    <th>{{this.itl}}</th>
+                    <th>{{this.wis}}</th>
+                    <th>{{this.cha}}</th>
+                </tr>
+        </tbody>
+      </table>
+        <textarea>notes</textarea>
+        </div>
+        <div class="card-action">
+          <a href="#">go to this characters</a>
+          {{!-- change href to character page path --}}
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+{{/each}}
+</div>
+
+
+
