@@ -7,6 +7,54 @@ module.exports = function(sequelize, DataTypes) {
         last_name: {
             type: DataTypes.STRING,
             allowNull: false
+        },
+        str: {
+            // Store str scores.
+            type: DataTypes.INTEGER,
+            allowNull: false
+        },
+        dex: {
+            // Store dex scores.
+            type: DataTypes.INTEGER,
+            allowNull: false
+        },
+        con: {
+            // Store con scores.
+            type: DataTypes.INTEGER,
+            allowNull: false
+        },
+        itl: {
+            // Store itl scores.
+            type: DataTypes.INTEGER,
+            allowNull: false
+        },
+        wis: {
+            // Store wis scores.
+            type: DataTypes.INTEGER,
+            allowNull: false
+        },
+        cha: {
+            // Store cha scores.
+            type: DataTypes.INTEGER,
+            allowNull: false
+        }, 
+        saveOneID: {
+            // Store saveOneID scores.
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+        modOne: {
+            type: DataTypes.INTEGER,
+            allowNull: false
+        },
+        saveTwoID: {
+            // Store saveOneID scores.
+            type: DataTypes.INTEGER,
+            allowNull: false
+        },
+        modTwo: {
+            type: DataTypes.INTEGER,
+            allowNull: false
         }
         // ,
         // classID: {

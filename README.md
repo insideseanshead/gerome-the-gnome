@@ -63,7 +63,7 @@ TBA
 
 ## Resources Used
 
-TBA
+Zachary Stowell for help many to one relationships and the add FK id for post requests.
 
 
 ## Further Development Plans
