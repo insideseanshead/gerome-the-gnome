@@ -1,0 +1,55 @@
+<div class="container">
+  <div class="row">
+    <form id="newChar">
+      <div class="input-field col s12">
+        <select class="browser-default" id="gender">
+          <option value="" disabled selected>Gender</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <label>Gender</label>
+        </select>
+      </div>
+      <div class="input-field col s12">
+        <!-- To be dynamically built in the future using the race table -->
+        <select class="browser-default" id="race">
+          <option value="" disabled selected>Race</option>
+          <option value="human">Human</option>
+          <option value="gnome">Gnome</option>
+          <label>Race</label>
+        </select>
+        <!-- {{#each Races}}
+          <option value=`{{raceType}}`>{{raceType}}</option>
+          {{/each}}  -->
+      </div>
+      <div class="input-field col s12">
+
+        <select class="browser-default" id="class">
+          <!-- To be dynamically built in the future using the class table -->
+          <option value="" disabled selected>Class</option>
+          <option value="fighter">Fighter</option>
+          <option value="wizard">Wizard</option>
+          <option value="rogue">Rogue</option>
+          <option value="cleric">Cleric</option>
+          <label>Class</label>
+          <!-- {{#each Class}}
+          <option value=`{{title}}`>{{title}}</option>
+          {{/each}} -->
+        </select>
+      </div>
+      <div class="input-field col s12">
+        <select class="browser-default" id="mainatr">
+          <option value="" disabled selected>Main Stat</option>
+          <option value="str">Strength</option>
+          <option value="dex">Dexterity</option>
+          <option value="con">Constitution</option>
+          <option value="itl">Intellect</option>
+          <option value="wis">Wisdom</option>
+          <option value="cha">Charisma</option>
+          <label>Main Stat</label>
+        </select>
+      </div>
+      <input type="submit" class="creation col s12 center btn" value="Create Character">
+
+    </form>
+  </div>
+</div>
