@@ -6,7 +6,7 @@ const exphbs = require("express-handlebars")
 var app = express();
 var PORT = process.env.PORT || 3000;
 
-app.use(express.urlencoded({ extended: true}));
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 //set handlebars as default template
@@ -26,9 +26,9 @@ app.use(characterController)
 //syncing our sequelize models and then starting express app
 db.sequelize.sync({ force: false }).then(function() {
     app.listen(PORT, function() {
-      console.log("App listening on PORT " + PORT);
+        console.log("App listening on PORT " + PORT);
     });
-  });
-  
+});
+
 
 // In the routes you'd need a Character.addClass(id of the class), for post request
