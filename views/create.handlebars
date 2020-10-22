@@ -1,95 +1,55 @@
 <div class="container">
-  <h1>Create Character {{create characters}}</h1>
-  <!-- Dropdown Trigger -->
-  <a class='dropdown-trigger btn' href='' data-target='dropdown1'>Gender</a>
+  <div class="row">
+    <form id="newChar">
+      <div class="input-field col s12">
+        <select class="browser-default" id="gender">
+          <option value="" disabled selected>Gender</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <label>Gender</label>
+        </select>
+      </div>
+      <div class="input-field col s12">
+        <!-- To be dynamically built in the future using the race table -->
+        <select class="browser-default" id="race">
+          <option value="" disabled selected>Race</option>
+          <option value="human">Human</option>
+          <option value="gnome">Gnome</option>
+          <label>Race</label>
+        </select>
+        <!-- {{#each Races}}
+          <option value=`{{raceType}}`>{{raceType}}</option>
+          {{/each}}  -->
+      </div>
+      <div class="input-field col s12">
 
-  <!-- Dropdown Structure -->
-  <ul id='dropdown1' class='dropdown-content'>
-    <li><a href="">Male</a></li>
-    {{!-- change href to male character array --}}
-    <li><a href="">Female</a></li>
-    {{!-- change href to female character array --}}
-  </ul>
-  <!-- Dropdown Trigger -->
-  <a class='dropdown-trigger btn' href='' data-target='dropdown2'>Race</a>
+        <select class="browser-default" id="class">
+          <!-- To be dynamically built in the future using the class table -->
+          <option value="" disabled selected>Class</option>
+          <option value="fighter">Fighter</option>
+          <option value="wizard">Wizard</option>
+          <option value="rogue">Rogue</option>
+          <option value="cleric">Cleric</option>
+          <label>Class</label>
+          <!-- {{#each Class}}
+          <option value=`{{title}}`>{{title}}</option>
+          {{/each}} -->
+        </select>
+      </div>
+      <div class="input-field col s12">
+        <select class="browser-default" id="mainatr">
+          <option value="" disabled selected>Main Stat</option>
+          <option value="str">Strength</option>
+          <option value="dex">Dexterity</option>
+          <option value="con">Constitution</option>
+          <option value="itl">Intellect</option>
+          <option value="wis">Wisdom</option>
+          <option value="cha">Charisma</option>
+          <label>Main Stat</label>
+        </select>
+      </div>
+      <input type="submit" class="creation col s12 center btn" value="Create Character">
 
-  <!-- Dropdown Structure -->
-  <ul id='dropdown2' class='dropdown-content'>
-    <li><a href=""></a></li>
-    {{!-- change each href to different race --}}
-    <li><a href=""></a></li>
-    <li><a href=""></a></li>
-    <li><a href=""></a></li>
-  </ul>
-  <a class='dropdown-trigger btn' href='' data-target='dropdown3'>class</a>
-
-  <!-- Dropdown Structure -->
-  <ul id='dropdown3' class='dropdown-content'>
-    <li><a href=""></a></li>
-    {{!-- change each href to different classes --}}
-    <li><a href=""></a></li>
-    <li><a href=""></a></li>
-    <li><a href=""></a></li>
-  </ul>
-  <a class='dropdown-trigger btn' href='' data-target='dropdown4'>Main Stat</a>
-
-  <!-- Dropdown Structure -->
-  <ul id='dropdown4' class='dropdown-content'>
-    <li><a href=""></a></li>
-    {{!-- change each href to different race --}}
-    <li><a href=""></a></li>
-    <li><a href=""></a></li>
-    <li><a href=""></a></li>
-  </ul>
-  <button class="btn waves-effect waves-light" type="create" name="action">create
-    <i class="material-icons right">send</i>
-  </button>
-
-  <form action="POST">
-    <div class="input-field">
-      <select>
-        <option value="" disabled selected>Race</option>
-        <option value="male">Male</option>
-        <option value="female">Female</option>
-      </select>
-    </div>
-    <div class="input-field">
-      <select>
-        {{!-- To be dynamically built in the future using the race table --}}
-        <option value="" disabled selected>Race</option>
-        <option value="human">Human</option>
-        <option value="gnome">Gnome</option>
-        {{!-- {{#each Races}}
-      <option value=`{{racename}}`>{{racename}}</option>
-      {{/each}} --}}
-      </select>
-    </div>
-    <div class="input-field">
-      <select>
-        {{!-- To be dynamically built in the future using the class table --}}
-        <option value="" disabled selected>Class</option>
-        <option value="fighter">Fighter</option>
-        <option value="wizard">Wizard</option>
-        <option value="rogue">Rogue</option>
-        <option value="cleric">Cleric</option>
-        {{!-- {{#each Class}}
-      <option value=`{{title}}`>{{title}}</option>
-      {{/each}} --}}
-
-      </select>
-    </div>
-    <div class="input-field">
-      <select>
-        <option value="" disabled selected>Main Stat</option>
-        <option value="str">Strength</option>
-        <option value="dex">Dexterity</option>
-        <option value="con">Constitution</option>
-        <option value="itl">Intellect</option>
-        <option value="wis">Wisdom</option>
-        <option value="cha">Charisma</option>
-      </select>
-    </div>
-    <div class="input-field center">
-      <button class="creation btn">Create Character</button>
-    </div>
-  </form>
+    </form>
+  </div>
+</div>
