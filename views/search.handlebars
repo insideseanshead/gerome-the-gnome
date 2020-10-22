@@ -1,7 +1,20 @@
 
 <div class="container">
-<h1>Search Character {{search characters}}</h1>
-  <button class="search" data-id="{{this.id}}"><textarea>search character</textarea></button>
+<h1>Search Character</h1>
+<div class="row">
+      <div class="input-field col s5">
+          <input placeholder="Placeholder" id="first_name" type="text" class="validate">
+          <label for="first_name">First Name</label>
+        </div>
+        <div class="input-field col s5">
+          <input id="last_name" type="text" class="validate">
+          <label for="last_name">Last Name</label>
+        </div>
+      </div>
+      <a class="btn-large col s2" id="searchBtn"><i class="material-icon right">search</i>Search</a>
+    </div>
+
+  
   {{!-- <div class="carousel">
     <a class="carousel-item" href="#one!"><img src="""></a>
     <a class="carousel-item" href="#two!"><img src=""></a>
@@ -21,7 +34,7 @@
       <div class="card-stacked">
         <div class="card-content">
           <h2>{{first_name}} {{last_name}}</h2>
-          <button class="delete" data-id="{{this.id}}">delete character</button>
+          <button class="delCharBtn btn" data-id="{{this.id}}">delete character</button>
          <table class="responsive-table">
                 <thead>
                 <tr>
@@ -44,14 +57,22 @@
                     <th>{{this.wis}}</th>
                     <th>{{this.cha}}</th>
                 </tr>
-        </tbody>
+                <tr>
+                    <th>{{this.strMod}}</th>
+                    <th>{{this.dexMod}}</th>
+                    <th>{{this.conMod}}</th>
+                    <th>{{this.itlMod}}</th>
+                    <th>{{this.wisMod}}</th>
+                    <th>{{this.chaMod}}</th>
+                </tr>
+            </tbody>
       </table>
         <textarea>notes</textarea>
         </div>
-        <div class="card-action">
+        <!-- <div class="card-action">
           <a href="#">go to this characters</a>
-          {{!-- change href to character page path --}}
-        </div>
+        </div> -->
+        <!-- change href to character page path -->
       </div>
     </div>
   </div>
