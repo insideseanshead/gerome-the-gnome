@@ -49,57 +49,57 @@ router.post("/api/makechar", function (req, res) {
   var postObj = {};
   if (req.body.mainAtr === "str") {
     postObj = {
-      str: rollArr[0],
-      dex: rollArr[1],
-      con: rollArr[2],
-      itl: rollArr[3],
-      wis: rollArr[4],
-      cha: rollArr[5],
+      str: parseInt(rollArr[0])+raceBonusJson.strBonus,
+      dex: parseInt(rollArr[1])+raceBonusJson.dexBonus,
+      con: parseInt(rollArr[2])+raceBonusJson.conBonus,
+      itl: parseInt(rollArr[3])+raceBonusJson.itlBonus,
+      wis: parseInt(rollArr[4])+raceBonusJson.wisBonus,
+      cha: parseInt(rollArr[5])+raceBonusJson.chaBonus
     };
   } else if (req.body.mainAtr === "dex") {
     postObj = {
-      str: rollArr[1],
-      dex: rollArr[0],
-      con: rollArr[2],
-      itl: rollArr[3],
-      wis: rollArr[4],
-      cha: rollArr[5],
+        str: parseInt(rollArr[1])+raceBonusJson.strBonus,
+        dex: parseInt(rollArr[0])+raceBonusJson.dexBonus,
+        con: parseInt(rollArr[2])+raceBonusJson.conBonus,
+        itl: parseInt(rollArr[3])+raceBonusJson.itlBonus,
+        wis: parseInt(rollArr[4])+raceBonusJson.wisBonus,
+        cha: parseInt(rollArr[5])+raceBonusJson.chaBonus
     };
   } else if (req.body.mainAtr === "con") {
     postObj = {
-      str: rollArr[1],
-      dex: rollArr[2],
-      con: rollArr[0],
-      itl: rollArr[3],
-      wis: rollArr[4],
-      cha: rollArr[5],
+        str: parseInt(rollArr[1])+raceBonusJson.strBonus,
+        dex: parseInt(rollArr[2])+raceBonusJson.dexBonus,
+        con: parseInt(rollArr[0])+raceBonusJson.conBonus,
+        itl: parseInt(rollArr[3])+raceBonusJson.itlBonus,
+        wis: parseInt(rollArr[4])+raceBonusJson.wisBonus,
+        cha: parseInt(rollArr[5])+raceBonusJson.chaBonus
     };
   } else if (req.body.mainAtr === "itl") {
     postObj = {
-      str: rollArr[1],
-      dex: rollArr[2],
-      con: rollArr[3],
-      itl: rollArr[0],
-      wis: rollArr[4],
-      cha: rollArr[5],
+        str: parseInt(rollArr[1])+raceBonusJson.strBonus,
+        dex: parseInt(rollArr[2])+raceBonusJson.dexBonus,
+        con: parseInt(rollArr[3])+raceBonusJson.conBonus,
+        itl: parseInt(rollArr[0])+raceBonusJson.itlBonus,
+        wis: parseInt(rollArr[4])+raceBonusJson.wisBonus,
+        cha: parseInt(rollArr[5])+raceBonusJson.chaBonus
     };
   } else if (req.body.mainAtr === "wis") {
     postObj = {
-      str: rollArr[1],
-      dex: rollArr[2],
-      con: rollArr[3],
-      itl: rollArr[4],
-      wis: rollArr[0],
-      cha: rollArr[5],
+        str: parseInt(rollArr[1])+raceBonusJson.strBonus,
+        dex: parseInt(rollArr[2])+raceBonusJson.dexBonus,
+        con: parseInt(rollArr[3])+raceBonusJson.conBonus,
+        itl: parseInt(rollArr[4])+raceBonusJson.itlBonus,
+        wis: parseInt(rollArr[0])+raceBonusJson.wisBonus,
+        cha: parseInt(rollArr[5])+raceBonusJson.chaBonus
     };
   } else if (req.body.mainAtr === "cha") {
     postObj = {
-      str: rollArr[1],
-      dex: rollArr[2],
-      con: rollArr[3],
-      itl: rollArr[4],
-      wis: rollArr[5],
-      cha: rollArr[0],
+        str: parseInt(rollArr[1])+raceBonusJson.strBonus,
+        dex: parseInt(rollArr[2])+raceBonusJson.dexBonus,
+        con: parseInt(rollArr[3])+raceBonusJson.conBonus,
+        itl: parseInt(rollArr[4])+raceBonusJson.itlBonus,
+        wis: parseInt(rollArr[5])+raceBonusJson.wisBonus,
+        cha: parseInt(rollArr[0])+raceBonusJson.chaBonus
     };
   }
 
