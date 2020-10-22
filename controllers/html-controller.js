@@ -27,9 +27,10 @@ router.get("/all", function(req, res) {
                 element.chaMod = Math.floor((element.cha-10)/2);
             });
             console.log(characterJson)
-            res.json(character)
+            res.render("all", {characters : characterJson})
+            // res.json(character)
         })
-        // res.render("all", {})
+        
 })
 
 router.get("/search", function(req, res) {

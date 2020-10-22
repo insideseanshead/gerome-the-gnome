@@ -12,8 +12,10 @@
       </div>
       <div class="card-stacked">
         <div class="card-content">
+          <div class="row">
           <h2>{{first_name}} {{last_name}}</h2>
           <button class="delete" data-id="{{this.id}}">delete character</button>
+          </div>
          <table class="responsive-table">
                 <thead>
                 <tr>
@@ -29,12 +31,20 @@
 
             <tbody>
                 <tr>
-                    <th>{{this.str}}</th>
-                    <th>{{this.dex}}</th>
-                    <th>{{this.con}}</th>
-                    <th>{{this.itl}}</th>
-                    <th>{{this.wis}}</th>
-                    <th>{{this.cha}}</th>
+                    <th>{{str}}</th>
+                    <th>{{dex}}</th>
+                    <th>{{con}}</th>
+                    <th>{{itl}}</th>
+                    <th>{{wis}}</th>
+                    <th>{{cha}}</th>
+                </tr>
+                <tr>
+                    <th>{{strMod}}</th>
+                    <th>{{dexMod}}</th>
+                    <th>{{conMod}}</th>
+                    <th>{{itlMod}}</th>
+                    <th>{{wisMod}}</th>
+                    <th>{{chaMod}}</th>
                 </tr>
         </tbody>
       </table>
