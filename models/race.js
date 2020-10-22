@@ -1,9 +1,27 @@
 module.exports = function(sequelize, DataTypes) {
     const Race = sequelize.define("Race", {
-        race: {
+        raceType: {
             type: DataTypes.STRING,
             allowNull: false
-        }
+        },
+        strBonus: {
+            type: DataTypes.INTEGER,
+        },
+        dexBonus: {
+            type: DataTypes.INTEGER,
+        },
+        conBonus: {
+            type: DataTypes.INTEGER,
+        },
+        itlBonus: {
+            type: DataTypes.INTEGER,
+        },
+        wisBonus: {
+            type: DataTypes.INTEGER,
+        },
+        chaBonus: {
+            type: DataTypes.INTEGER,
+        },    
     })
     Race.associate = function(models) {
         // add associations here
