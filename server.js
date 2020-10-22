@@ -16,6 +16,13 @@ app.set("view engine", "handlebars");
 //require models for syncing
 var db = require("./models");
 
+//Import Routes for controllers
+const characterController = require('./controllers/character-controller')
+app.use(characterController)
+
+// const htmlController = require('./controllers/html-controllers')
+// app.use("/api/turtles",turtleRoutes)
+
 //syncing our sequelize models and then starting express app
 db.sequelize.sync({ force: false }).then(function() {
     app.listen(PORT, function() {

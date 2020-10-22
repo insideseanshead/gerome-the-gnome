@@ -38,24 +38,24 @@ module.exports = function(sequelize, DataTypes) {
             type: DataTypes.INTEGER,
             allowNull: false
         }, 
-        saveOneID: {
-            // Store saveOneID scores.
-            type: DataTypes.STRING,
-            allowNull: false
-        },
-        modOne: {
-            type: DataTypes.INTEGER,
-            allowNull: false
-        },
-        saveTwoID: {
-            // Store saveOneID scores.
-            type: DataTypes.INTEGER,
-            allowNull: false
-        },
-        modTwo: {
-            type: DataTypes.INTEGER,
-            allowNull: false
-        }
+        // saveOneID: {
+        //     // Store saveOneID scores.
+        //     type: DataTypes.STRING,
+        //     allowNull: false
+        // },
+        // modOne: {
+        //     type: DataTypes.INTEGER,
+        //     allowNull: false
+        // },
+        // saveTwoID: {
+        //     // Store saveOneID scores.
+        //     type: DataTypes.INTEGER,
+        //     allowNull: false
+        // },
+        // modTwo: {
+        //     type: DataTypes.INTEGER,
+        //     allowNull: false
+        // }
         // ,
         // classID: {
         //     type: sequelize.INTEGER,

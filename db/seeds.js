@@ -27,13 +27,12 @@ const classes = [
         saveOneAtt: 2,
         saveTwoName: "cha",
         saveTwoAtt: 2
-    }
-    
+    }  
 ]
 
 const races = [
     {
-        race: "human",
+        raceType: "human",
         strBonus: 1,
         dexBonus: 1,
         conBonus: 1,
@@ -42,7 +41,7 @@ const races = [
         chaBonus: 1
     },
     {
-        race: "dwarf",
+        raceType: "dwarf",
         strBonus: 0,
         dexBonus: 0,
         conBonus: 2,
@@ -51,7 +50,7 @@ const races = [
         chaBonus: 0
     },
     {
-        race: "elf",
+        raceType: "elf",
         strBonus: 0,
         dexBonus: 2,
         conBonus: 0,
@@ -60,7 +59,7 @@ const races = [
         chaBonus: 0
     },
     {
-        race: "halfling",
+        raceType: "halfling",
         strBonus: 0,
         dexBonus: 2,
         conBonus: 0,
