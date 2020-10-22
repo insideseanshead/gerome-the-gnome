@@ -13,27 +13,30 @@
         <!-- To be dynamically built in the future using the race table -->
         <select class="browser-default" id="race">
           <option value="" disabled selected>Race</option>
-          <option value="human">Human</option>
-          <option value="gnome">Gnome</option>
+          <option value="0">Human</option>
+          <option value="1">Dwarf</option>
+          <option value="2">Elf</option>
+          <option value="3">Halfling</option>
+          <!-- {{#each Races}}
+          <option value=`{{id}}`>{{raceType}}</option>
+          {{/each}}  -->
           <label>Race</label>
         </select>
-        <!-- {{#each Races}}
-          <option value=`{{raceType}}`>{{raceType}}</option>
-          {{/each}}  -->
+        
       </div>
       <div class="input-field col s12">
 
         <select class="browser-default" id="class">
           <!-- To be dynamically built in the future using the class table -->
           <option value="" disabled selected>Class</option>
-          <option value="fighter">Fighter</option>
-          <option value="wizard">Wizard</option>
-          <option value="rogue">Rogue</option>
-          <option value="cleric">Cleric</option>
-          <label>Class</label>
+          <option value="0">Fighter</option>
+          <option value="1">Rogue</option>
+          <option value="2">Wizard</option>
+          <option value="3">Cleric</option>
           <!-- {{#each Class}}
-          <option value=`{{title}}`>{{title}}</option>
+          <option value=`{{id}}`>{{title}}</option>
           {{/each}} -->
+          <label>Class</label>
         </select>
       </div>
       <div class="input-field col s12">
