@@ -1,0 +1,71 @@
+body{
+    background: navy;
+    font-family: 'Grenze Gotisch', cursive; 
+    /* add a background-image of Gernome to the right of the table possible faded or an outline*/
+    color:blue; 
+    text-align:center; 
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+
+nav{
+    background-image: url(https://img.freepik.com/free-vector/abstract-gray-geometric-pattern-background_1035-18654.jpg?size=626&ext=jpg);
+    color: rgb(0, 204, 255); 
+    min-height: 80px;
+}
+
+.container{
+    
+    text-align: center;
+    /* border-radius: 25px; */
+    padding: 5px 5x;
+    height: fit-content;
+    width: fit-content;
+    justify-content: center;
+    margin-top: 10px ;
+    font-size: 20px;
+
+}
+
+.card-stacked{
+    background: beige;
+    width: fit-content; 
+    height: fit-content;
+    text-align:center;
+
+}
+
+.btn {
+    transition-duration: 0.4s;
+    font-family: 'Grenze Gotisch', cursive;
+    font-size: 20px; 
+    color:blue; 
+  }
+  
+  .btn:hover {
+    /* background-image:url(https://www.shopsteins.com/prodimages/15319-DEFAULT-l.jpg); */
+    background-size: cover; 
+    
+    
+  }
+
+  footer{
+    text-align: center; 
+    background-image: url(https://img.freepik.com/free-vector/abstract-gray-geometric-pattern-background_1035-18654.jpg?size=626&ext=jpg);
+    min-height: 60px;
+  }
+
+  .table > td{
+      padding:10px; 
+      background:beige; 
+      border:1px solid; 
+      /* line-height:60px;  */
+      text-align:center; 
+  }
+
+  
