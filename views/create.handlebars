@@ -18,7 +18,7 @@
           <option value="2">Elf</option>
           <option value="3">Halfling</option> -->
           {{#each races}}
-          <option value=`{{id}}`>{{raceType}}</option>
+          <option value={{id}}>{{raceType}}</option>
           {{/each}}
           <label>Race</label>
         </select>
@@ -34,7 +34,7 @@
           <option value="2">Wizard</option>
           <option value="3">Cleric</option> -->
           {{#each classes}}
-          <option value=`{{id}}`>{{title}}</option>
+          <option value={{id}}>{{title}}</option>
           {{/each}} 
           <label>Class</label>
         </select>
@@ -52,7 +52,6 @@
         </select>
       </div>
       <input type="submit" class="creation col s12 center btn" id="newChar" value="Create Character">
-
     </form>
   </div>
 </div>
