@@ -41,4 +41,14 @@ router.get("/edit", function(req, res) {
     res.render("edit", {})
 })
 
+// router.delete("/api/characters/:id", function(req, res) {
+//     db.Character.destroy({
+//       where: {
+//         id: req.params.id
+//       }
+//     }).then(function(characters) {
+//       res.json(characters);
+//     });
+//   });
+
 module.exports = router;
