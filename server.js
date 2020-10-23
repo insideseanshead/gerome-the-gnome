@@ -20,8 +20,8 @@ var db = require("./models");
 const characterController = require('./controllers/character-controller')
 app.use(characterController)
 
-// const htmlController = require('./controllers/html-controllers')
-// app.use("/api/all",htmlController)
+const htmlController = require('./controllers/html-controller')
+app.use(htmlController)
 
 //syncing our sequelize models and then starting express app
 db.sequelize.sync({ force: false }).then(function() {
