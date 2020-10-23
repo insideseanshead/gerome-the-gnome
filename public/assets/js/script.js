@@ -23,45 +23,47 @@ $("#newChar").on("submit", event => {
             mainatr: mainAtr
         }
         console.log(charObj)
-        // $.ajax({
-        //     method:"POST",
-        //     url:"/api/???",
-        //     data:charObj
-        // }).then(apiRes=>{
-        //     console.log(apiRes);
-        //     window.location.href= "/myprofile"
-        // })
+        $.ajax({
+            method: "POST",
+            url: "/api/makechar",
+            data: charObj
+        }).then(apiRes => {
+            console.log(apiRes);
+            window.location.href = "/create"
+        })
     }
 })
 
 
 $("#searchBtn").on("submit", event => {
     event.preventDefault();
-    console.log('new character made!');
-    const charObj = {
-        first_name: $("#first_name").val(),
-        last_name: $("#last_name").val(),
+    console.log('searched!');
+    const charID = $('#searchchar').val();
+    if (charID === "") {
+        console.log("all fields not entered");
+        // Consider appending
     }
-    console.log(charObj)
-    // $.ajax({
-    //     method:"GET",
-    //     url:"/api/??",
-    //     data:charObj
-    // }).then(apiRes=>{
-    //     console.log(apiRes);
-    //     var charID = apiRes.id
-    //     window.location.href= `/search/$(charID)`
-    // })
+    else {
+        $.ajax({
+            method: "GET",
+            url: "/api/search",
+            data: charID
+        }).then(apiRes => {
+            console.log(apiRes);
+            const ajaxID = apiRes.id
+            window.location.href = `/search/$(ajaxID)`
+        })
+    }
 })
 
 $(".delCharBtn").on("click", function (event) {
     const charID = $(this).attr("data-id");
-    // $.ajax({
-    //     method:"DELETE",
-    //     url:"/api/delete",
-    //     data:charID
-    // }).then(apiRes=>{
-    //     console.log(apiRes);
-    //     window.location.href= `/all`
-    // })
+    $.ajax({
+        method: "DELETE",
+        url: "/api/delete",
+        data: charID
+    }).then(apiRes => {
+        console.log(apiRes);
+        window.location.href = `/characters`
+    })
 })
