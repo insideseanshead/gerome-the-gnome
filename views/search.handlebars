@@ -1,0 +1,84 @@
+
+<div class="container">
+<h1>Search Character</h1>
+<div class="row">
+      <div class="input-field col s10">
+       <select class="browser-default" id="searchchar">
+          <option value="" disabled selected>Select Character</option>
+        {{#each characters}}
+          <option value=`{{id}}`>{{first_name}} {{last_name}}</option>
+        {{/each}}
+        <label>Select Character</label>
+        </select>
+        </div>
+        <div class="input-field col s5">
+          <input id="last_name" type="text" class="validate">
+          <label for="last_name">Last Name</label>
+        </div>
+      </div>
+      <a class="btn-large col s2" id="searchBtn"><i class="material-icon right">search</i>Search</a>
+    </div>
+
+  
+  {{!-- <div class="carousel">
+    <a class="carousel-item" href="#one!"><img src="""></a>
+    <a class="carousel-item" href="#two!"><img src=""></a>
+    <a class="carousel-item" href="#three!"><img src=""></a>
+    <a class="carousel-item" href="#four!"><img src=""></a>
+    <a class="carousel-item" href="#five!"><img src=""></a>
+  </div> --}}
+<div class="row">
+
+  <div class="col s12 m7">
+    <h2 class="header">Horizontal Card</h2>
+    <div class="card horizontal">
+      <div class="card-image">
+        <img src="">
+        {{!-- fill with our card image --}}
+      </div>
+      <div class="card-stacked">
+        <div class="card-content">
+          <h2>{{first_name}} {{last_name}}</h2>
+          <button class="delCharBtn btn" data-id="{{this.id}}">delete character</button>
+         <table class="responsive-table">
+                <thead>
+                <tr>
+                    <td>strength</td>
+                    <td>dexterity</td>
+                    <td>constitution</td>
+                    <td>intelligence</td>
+                    <td>wisdom</td>
+                    <td>charisma</td>
+                    
+                </tr>
+                </thead>
+
+            <tbody>
+                <tr>
+                    <th>{{this.str}}</th>
+                    <th>{{this.dex}}</th>
+                    <th>{{this.con}}</th>
+                    <th>{{this.itl}}</th>
+                    <th>{{this.wis}}</th>
+                    <th>{{this.cha}}</th>
+                </tr>
+                <tr>
+                    <th>{{this.strMod}}</th>
+                    <th>{{this.dexMod}}</th>
+                    <th>{{this.conMod}}</th>
+                    <th>{{this.itlMod}}</th>
+                    <th>{{this.wisMod}}</th>
+                    <th>{{this.chaMod}}</th>
+                </tr>
+            </tbody>
+      </table>
+        <textarea>notes</textarea>
+        </div>
+        <!-- <div class="card-action">
+          <a href="#">go to this characters</a>
+        </div> -->
+        <!-- change href to character page path -->
+      </div>
+    </div>
+  </div>
+  </div>
