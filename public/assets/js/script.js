@@ -64,6 +64,6 @@ $(".delCharBtn").on("click", function (event) {
         data: charID
     }).then(apiRes => {
         console.log(apiRes);
-        window.location.href = `/all`
+        window.location.href = `/characters`
     })
 })
