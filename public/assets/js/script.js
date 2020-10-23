@@ -1,6 +1,6 @@
 // Dependencies
-var express = require("express");
-var exphbs = require("express-handlebars");
+// var express = require("express");
+// var exphbs = require("express-handlebars");
 
 console.log("safe for work comment");
 
@@ -56,11 +56,14 @@ $("#searchBtn").on("submit", event => {
     }
 })
 
-$(".delCharBtn").on("click", function (event) {
+$("body").on("click", ".delCharBtn", function (event) {
+    console.log("Clicked")
     const charID = $(this).attr("data-id");
+    
+    console.log(charID)
     $.ajax({
         method: "DELETE",
-        url: "/api/delete",
+        url: `/api/delete/${charID}`,
         data: charID
     }).then(apiRes => {
         console.log(apiRes);
