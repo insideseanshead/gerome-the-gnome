@@ -12,7 +12,7 @@ router.get("/create", function(req, res) {
     res.render("create", {})
 })
 
-router.get("/all", function(req, res) {
+router.get("/characters", function(req, res) {
     db.Character.findAll().then(character => {
             const characterJson = character.map(charObj => {
                 return charObj.toJSON()
@@ -26,8 +26,9 @@ router.get("/all", function(req, res) {
                 element.wisMod = Math.floor((element.wis-10)/2);
                 element.chaMod = Math.floor((element.cha-10)/2);
             });
+            const charRender = {characters : characterJson}
             console.log(characterJson)
-            res.render("all", {characters : characterJson})
+            res.render("allChar", charRender)
             // res.json(character)
         })
         
