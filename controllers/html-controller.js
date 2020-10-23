@@ -27,6 +27,32 @@ router.get("/create", function (req, res) {
     })
 })
 
+// router.get("/createwith", function (req, res) {
+//     db.Class.findAll().then(classy => {
+//         const classJson = classy.map(classObj => {
+//             return classObj.toJSON()
+//         })
+//         db.Race.findAll().then(racetype => {
+//             const raceJson = racetype.map(raceObj => {
+//                 return raceObj.toJSON()
+//             })
+//             db.Character.findOne({
+//                 order: [ [ 'createdAt', 'DESC' ]],
+//             }).then(characters => {
+//                 const charJson = characters.map(charObj => {
+//                     return charObj.toJSON()
+//                 })
+//             const charRender = { classes: classJson , races: raceJson, characters: charJson}
+//             // console.log(classJson);
+//             // console.log(raceJson);
+//             res.render("createwith", charRender)
+//             // res.json(character)
+//         })
+//     })
+    
+// })
+// })
+
 router.get("/characters", function (req, res) {
     db.Character.findAll().then(character => {
         const characterJson = character.map(charObj => {

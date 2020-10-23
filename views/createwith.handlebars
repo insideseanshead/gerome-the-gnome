@@ -1,0 +1,115 @@
+<div class="container">
+    <div class="row">
+        <form id="newChar">
+            <div class="input-field col s12">
+                <select class="browser-default" id="gender">
+                    <option value="" disabled selected>Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <label>Gender</label>
+                </select>
+            </div>
+            <div class="input-field col s12">
+                <!-- To be dynamically built in the future using the race table -->
+                <select class="browser-default" id="race">
+                    <option value="" disabled selected>Race</option>
+                    <!-- <option value="0">Human</option>
+          <option value="1">Dwarf</option>
+          <option value="2">Elf</option>
+          <option value="3">Halfling</option> -->
+                    {{#each races}}
+                    <option value={{id}}>{{raceType}}</option>
+                    {{/each}}
+                    <label>Race</label>
+                </select>
+
+            </div>
+            <div class="input-field col s12">
+
+                <select class="browser-default" id="class">
+                    <!-- To be dynamically built in the future using the class table -->
+                    <option value="" disabled selected>Class</option>
+                    <!-- <option value="0">Fighter</option>
+          <option value="1">Rogue</option>
+          <option value="2">Wizard</option>
+          <option value="3">Cleric</option> -->
+                    {{#each classes}}
+                    <option value={{id}}>{{title}}</option>
+                    {{/each}}
+                    <label>Class</label>
+                </select>
+            </div>
+            <div class="input-field col s12">
+                <select class="browser-default" id="mainatr">
+                    <option value="" disabled selected>Main Stat</option>
+                    <option value="str">Strength</option>
+                    <option value="dex">Dexterity</option>
+                    <option value="con">Constitution</option>
+                    <option value="itl">Intellect</option>
+                    <option value="wis">Wisdom</option>
+                    <option value="cha">Charisma</option>
+                    <label>Main Stat</label>
+                </select>
+            </div>
+            <input type="submit" class="creation col s12 center btn" id="newChar" value="Create Character">
+        </form>
+    </div>
+    <div class="row">
+        {{#each characters}}
+        <div class="col s12 m7">
+            <h2 class="header">Horizontal Card</h2>
+            <div class="card horizontal">
+                <div class="card-image">
+                    <img src="">
+                    {{!-- fill with our card image --}}
+                </div>
+                <div class="card-stacked">
+                    <div class="card-content">
+                        <h2>{{first_name}} {{last_name}}</h2>
+                        <button class="delCharBtn btn" data-id="{{this.id}}">delete character</button>
+                        <table class="responsive-table">
+                            <thead>
+                                <tr>
+                                    <td>strength</td>
+                                    <td>dexterity</td>
+                                    <td>constitution</td>
+                                    <td>intelligence</td>
+                                    <td>wisdom</td>
+                                    <td>charisma</td>
+
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <th>{{this.str}}</th>
+                                    <th>{{this.dex}}</th>
+                                    <th>{{this.con}}</th>
+                                    <th>{{this.itl}}</th>
+                                    <th>{{this.wis}}</th>
+                                    <th>{{this.cha}}</th>
+                                </tr>
+                                <tr>
+                                    <th>{{this.strMod}}</th>
+                                    <th>{{this.dexMod}}</th>
+                                    <th>{{this.conMod}}</th>
+                                    <th>{{this.itlMod}}</th>
+                                    <th>{{this.wisMod}}</th>
+                                    <th>{{this.chaMod}}</th>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <textarea>notes</textarea>
+                    </div>
+                    <!-- <div class="card-action">
+          <a href="#">go to this characters</a>
+        </div> -->
+                    <!-- change href to character page path -->
+                </div>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+
+
+</div>
