@@ -2,9 +2,14 @@
 <div class="container">
 <h1>Search Character</h1>
 <div class="row">
-      <div class="input-field col s5">
-          <input placeholder="Placeholder" id="first_name" type="text" class="validate">
-          <label for="first_name">First Name</label>
+      <div class="input-field col s10">
+       <select class="browser-default" id="searchchar">
+          <option value="" disabled selected>Select Character</option>
+        {{#each characters}}
+          <option value=`{{id}}`>{{first_name}} {{last_name}}</option>
+        {{/each}}
+        <label>Select Character</label>
+        </select>
         </div>
         <div class="input-field col s5">
           <input id="last_name" type="text" class="validate">
