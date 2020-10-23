@@ -29,7 +29,7 @@ $("#newChar").on("submit", event => {
             data: charObj
         }).then(apiRes => {
             console.log(apiRes);
-            window.location.href = "/createwith"
+            window.location.href = "/create"
         })
     }
 })
