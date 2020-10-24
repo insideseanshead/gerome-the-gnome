@@ -104,6 +104,17 @@ router.post("/api/makechar", function (req, res) {
       };
     }
 
+    // append on all modifiers
+
+    postObj.strMod = Math.floor((postObj.str - 10) / 2);
+    postObj.dexMod = Math.floor((postObj.dex - 10) / 2);
+    postObj.conMod = Math.floor((postObj.con - 10) / 2);
+    postObj.itlMod = Math.floor((postObj.itl - 10) / 2);
+    postObj.wisMod = Math.floor((postObj.wis - 10) / 2);
+    postObj.chaMod = Math.floor((postObj.cha - 10) / 2);
+
+    // remove code between comments if it doesnt work.
+
     console.table(postObj);
 
     const myClassID = parseInt(req.body.class)
@@ -119,6 +130,12 @@ router.post("/api/makechar", function (req, res) {
       itl: postObj.itl,
       wis: postObj.wis,
       cha: postObj.cha,
+      strMod: postObj.strMod,
+      dexMod: postObj.dexMod,
+      conMod: postObj.conMod,
+      itlMod: postObj.itlMod,
+      wisMod: postObj.wisMod,
+      chaMod: postObj.chaMod,
       ClassId: myClassID,
       RaceId: myRaceID,
     }).then(function (dbCharacter) {
@@ -183,5 +200,30 @@ const statRoll = function () {
   console.log(numbers);
   return numbers;
 };
+
+router.delete("/api/delete/:id", (req, res) => {
+  console.log(req.params.id);
+  db.Character.destroy({ where: { id: req.params.id } }).then(deathChar => {
+    console.log("Deleted");
+    res.json(deathChar);
+  });
+});
+
+router.put("/api/edit/:id", (req, res) => {
+  // console.log(req.params.id);
+  // console.log(req.body.note);
+
+  db.Character.update({
+    note: req.body.note
+  }, {
+    where: {
+      id: req.params.id
+    }
+  }).then(editCharacter => {
+    res.json(editCharacter);
+  }).catch(err => {
+    res.status(500).send("Encounted an error with update")
+  })
+})
 
 module.exports = router;

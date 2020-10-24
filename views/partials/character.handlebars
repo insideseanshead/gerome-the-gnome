@@ -1,0 +1,59 @@
+
+
+     <div class="col s12 m7">
+
+      <div class="card horizontal">
+        <div class="card-image">
+          <img
+            src="https://cdn11.bigcommerce.com/s-o192dasfr1/images/stencil/500x659/products/146/420/1300__03714.1577728307.jpg?c=2">
+          {{!-- fill with our card image --}}
+        </div>
+        <div class="card-stacked">
+          <div class="card-content">
+            <div class="row">
+              <h2>{{first_name}} {{last_name}}</h2>
+            </div>
+            <table class="responsive-table">
+              <thead>
+                <tr>
+                  <td>strength</td>
+                  <td>dexterity</td>
+                  <td>constitution</td>
+                  <td>intelligence</td>
+                  <td>wisdom</td>
+                  <td>charisma</td>
+
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <th>{{str}}</th>
+                  <th>{{dex}}</th>
+                  <th>{{con}}</th>
+                  <th>{{itl}}</th>
+                  <th>{{wis}}</th>
+                  <th>{{cha}}</th>
+                </tr>
+                <tr>
+                  <th>{{strMod}}</th>
+                  <th>{{dexMod}}</th>
+                  <th>{{conMod}}</th>
+                  <th>{{itlMod}}</th>
+                  <th>{{wisMod}}</th>
+                  <th>{{chaMod}}</th>
+                </tr>
+              </tbody>
+            </table>
+            <textarea class={{id}}>{{note}}</textarea>
+            <button class="editNotesButton btn white" data-id={{id}}>update note</button>
+
+          </div>
+          <div class="card-action">
+            <button class="moveToButton btn white" data-id={{id}}>go to this character</button>
+            <!-- {{!-- change href to character page path --}} -->
+            <button class="delCharButton btn white" data-id={{id}}>delete character</button>
+          </div>
+        </div>
+      </div>
+    </div>

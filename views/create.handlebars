@@ -1,4 +1,5 @@
 <div class="container">
+  {{#with charRender }}
   <div class="row">
     <form id="newChar">
       <div class="input-field col s12">
@@ -54,4 +55,10 @@
       <input type="submit" class="creation col s12 center btn" id="newChar" value="Create Character">
     </form>
   </div>
+  {{/with}}
+  {{#if mostRecent }}
+    {{#each mostRecent}}
+      {{> character }}
+    {{/each}}
+  {{/if}}
 </div>
