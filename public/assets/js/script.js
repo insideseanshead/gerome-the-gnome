@@ -58,17 +58,21 @@ $("body").on("click", "#searchBtn", function (event) {
     }
 })
 
-$("body").on("click", ".delCharBtn", function (event) {
+$("body").on("click", ".delCharButton", function (event) {
     console.log("Clicked")
     const charID = $(this).attr("data-id");
-    
     console.log(charID)
     $.ajax({
         method: "DELETE",
         url: `/api/delete/${charID}`,
-        data: charID
     }).then(apiRes => {
         console.log(apiRes);
-        window.location.href = `/characters`
+        window.location.href = `/search`
     })
+})
+
+$("body").on("click", ".moveToButton", function (event) {
+    console.log("Clicked")
+    const charID = $(this).attr("data-id");
+    window.location.href = `/search/${charID}`
 })

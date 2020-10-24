@@ -201,4 +201,12 @@ const statRoll = function () {
   return numbers;
 };
 
+router.delete("/api/delete/:id", (req, res) => {
+  console.log(req.params.id);
+  db.Character.destroy({ where: { id: req.params.id } }).then(deathChar => {
+    console.log("Deleted");
+    res.json(deathChar);
+  });
+});
+
 module.exports = router;
