@@ -29,7 +29,9 @@ $("#newChar").on("submit", event => {
             data: charObj
         }).then(apiRes => {
             console.log(apiRes);
-            window.location.href = "/create"
+            // window.location.href = "/create"
+            // $(".container").append("<h1>"+apiRes.first_name+"</h1>")
+            window.location.search = "lastID=" + apiRes.id 
         })
     }
 })

@@ -1,3 +1,4 @@
+const { response } = require("express");
 var express = require("express");
 
 var router = express.Router();
@@ -9,11 +10,12 @@ router.get("/", function (req, res) {
 })
 
 router.get("/create", function (req, res) {
+    const lastID = req.query.lastID
     db.Class.findAll().then(classy => {
         const classJson = classy.map(classObj => {
             return classObj.toJSON()
         })
-        db.Race.findAll().then(racetype => {
+        db.Race.findAll().then(async (racetype) => {
             const raceJson = racetype.map(raceObj => {
                 return raceObj.toJSON()
             })
@@ -21,7 +23,15 @@ router.get("/create", function (req, res) {
             const charRender = { classes: classJson , races: raceJson }
             // console.log(classJson);
             // console.log(raceJson);
-            res.render("create", charRender)
+            if(lastID == null){
+                console.log('anything')
+                res.render("create", {charRender})
+            } else {
+                const mostRecent=[(await db.Character.findByPk(lastID)).toJSON()]
+                console.log(mostRecent)
+                res.render("create", {charRender,mostRecent})
+            }
+            // res.render("create", charRender)
             // res.json(character)
         })
     })
@@ -55,6 +65,7 @@ router.get("/create", function (req, res) {
 
 router.get("/characters", function (req, res) {
     db.Character.findAll().then(character => {
+        console.log(character)
         const characterJson = character.map(charObj => {
             return charObj.toJSON()
         })
