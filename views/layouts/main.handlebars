@@ -11,37 +11,60 @@
 </head>
 
 <body>
-  <nav>
-    <div class="nav-wrapper">
-      <a href="" class="brand-logo">Logo</a>
-      {{!-- add logo --}}
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-         <li><button><a href="./search">search character</a></button></li>
-         {{!-- hrefs to be changed when routes are decided, avoid spaces --}}
-        <li><button><a href="./create">create character</a></button></li>
-        {{!-- hrefs to be changed when routes are decided, avoid spaces  --}}
-        <li><button><a href="./characters">all character</a></button></li>
-        {{!-- hrefs to be changed when routes are decided, avoid spaces --}}
-      </ul>
+      <div class="navbar-fixed">
+    <nav>
+        <div class="nav-wrapper">
+           
+          <a href="" class="brand-logo blue-text">Gerome The Gnome</a>
+          <!-- {{!-- add logo --}} -->
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+          <ul class="right hide-on-med-and-down">
+             <li><a class="blue-text text-darken-3" href="./search">search character</a></li>
+             <!-- {{!-- hrefs to be changed when routes are decided, avoid spaces --}} -->
+            <li><a class="blue-text text-darken-3" href="./create">create character</a></li>
+            <!-- {{!-- hrefs to be changed when routes are decided, avoid spaces  --}} -->
+            <li><a class="blue-text text-darken-3" href="./all">all character</a></li>
+            <!-- {{!-- hrefs to be changed when routes are decided, avoid spaces --}} -->
+          </ul>
     </div>
-  </nav>
+</nav>
+</div>
+<ul class="sidenav" id="mobile-demo">
+    <li><a class="blue-text text-darken-3" href="./search">search character</a></li>
+    <!-- {{!-- hrefs to be changed when routes are decided, avoid spaces --}} -->
+   <li><a class="blue-text text-darken-3" href="./create">create character</a></li>
+   <!-- {{!-- hrefs to be changed when routes are decided, avoid spaces  --}} -->
+   <li> <a class="blue-text text-darken-3" href="./all">all character</a></li>
+  </ul>
+
+<main>
 
   {{{ body }}} 
-     <footer class="page-footer">
+  
+  </main>
+      <footer class="page-footer">
         <div class="container">
             <div class="row">
             <div class=footer-copyright>
               <h4 class="blue-text text-darken-3">© 2020 Gerome the Gnome</h4>
+            </div>
                 <a class="blue-text text-darken-3" href="https://github.com/insideseanshead/gerome-the-gnome">github</a>
                 <a class="blue-text text-darken-3" href="#!">heroku</a>
-            </div>
-            </div>
+            
+            </div> 
         </div>
       </footer>
+    
   <!-- Jquery and base file link for script of navbar, will need other pages scripts below -->
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="/assets/js/script.js"></script>
+    <script>
+  $(document).ready(function(){
+    $('.sidenav').sidenav();
+  });
+
+    </script>
 </body>
 
 </HTML>

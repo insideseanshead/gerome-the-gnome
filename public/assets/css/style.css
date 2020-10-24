@@ -2,8 +2,8 @@ body{
     background: navy;
     font-family: 'Grenze Gotisch', cursive; 
     /* add a background-image of Gernome to the right of the table possible faded or an outline*/
-    color:blue; 
-    text-align:center; 
+    color: white; 
+    /* text-align:center;  */
     display: flex;
     min-height: 100vh;
     flex-direction: column;
@@ -16,7 +16,7 @@ body{
 nav{
     background-image: url(https://img.freepik.com/free-vector/abstract-gray-geometric-pattern-background_1035-18654.jpg?size=626&ext=jpg);
     color: rgb(0, 204, 255); 
-    min-height: 80px;
+    /* min-height: 80px; */
 }
 
 .container{
@@ -44,7 +44,7 @@ nav{
     transition-duration: 0.4s;
     font-family: 'Grenze Gotisch', cursive;
     font-size: 20px; 
-    color:blue; 
+    /* color:blue;  */
   }
   
   .btn:hover {
