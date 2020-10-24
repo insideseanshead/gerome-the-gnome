@@ -209,4 +209,21 @@ router.delete("/api/delete/:id", (req, res) => {
   });
 });
 
+router.put("/api/edit/:id", (req, res) => {
+  // console.log(req.params.id);
+  // console.log(req.body.note);
+
+  db.Character.update({
+    note: req.body.note
+  }, {
+    where: {
+      id: req.params.id
+    }
+  }).then(editCharacter => {
+    res.json(editCharacter);
+  }).catch(err => {
+    res.status(500).send("Encounted an error with update")
+  })
+})
+
 module.exports = router;

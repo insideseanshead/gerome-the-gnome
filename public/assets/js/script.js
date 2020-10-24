@@ -76,3 +76,22 @@ $("body").on("click", ".moveToButton", function (event) {
     const charID = $(this).attr("data-id");
     window.location.href = `/search/${charID}`
 })
+
+$("body").on("click", ".editNotesButton", function (event) {
+    event.preventDefault();
+    console.log("Clicked")
+    const charID = $(this).attr("data-id");
+    const updatednotes = $(`.${charID}`).val();
+    console.log(charID);
+    const noteObj = { note: updatednotes }
+    // console.log(charID)
+    $.ajax({
+        method: "PUT",
+        url: `/api/edit/${charID}`,
+        data:noteObj
+    }).then(apiRes => {
+        // console.log(apiRes);
+        // window.location.href = "/characters"
+        window.location.reload();
+    })
+})
