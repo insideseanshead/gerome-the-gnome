@@ -5,11 +5,12 @@ var router = express.Router();
 
 const db = require("../models");
 
-router.get("/", function (req, res) {
-    res.render("create", {})
-})
+// router.get("/", function (req, res) {
+//     // res.render("create", {})
+//     window.location.href = "/create"
+// })
 
-router.get("/create", function (req, res) {
+router.get("/", function (req, res) {
     const lastID = req.query.lastID
     db.Class.findAll().then(classy => {
         const classJson = classy.map(classObj => {
