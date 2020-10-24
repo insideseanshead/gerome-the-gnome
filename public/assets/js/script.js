@@ -67,7 +67,7 @@ $("body").on("click", ".delCharButton", function (event) {
         url: `/api/delete/${charID}`,
     }).then(apiRes => {
         console.log(apiRes);
-        window.location.href = `/search`
+        window.location.href = `/characters`
     })
 })
 
