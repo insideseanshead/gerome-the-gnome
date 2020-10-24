@@ -88,7 +88,45 @@ router.get("/characters", function (req, res) {
 })
 
 router.get("/search", function (req, res) {
-    res.render("search", {})
+    console.log("in the search route");
+    // console.log(req.body);
+    
+        db.Character.findAll().then(async (chartype) => {
+            const charJson = chartype.map(charObj => {
+                return charObj.toJSON()
+            })
+
+            const charRender = { characters: charJson }
+            res.render("search", {charRender})
+            
+        })
+})
+
+router.get("/search/:id", function (req, res) {
+    console.log("in the search route");
+    console.log(req);
+    const lastID = req.params.id
+    console.log(lastID);
+        db.Character.findAll().then(async (chartype) => {
+            const charJson = chartype.map(charObj => {
+                return charObj.toJSON()
+            })
+
+            const charRender = { characters: charJson }
+            // console.log(classJson);
+            // console.log(raceJson);
+            if(lastID == null){
+                console.log('anything')
+                res.render("search", {charRender})
+            } else {
+                console.log("I made it to else");
+                const mostRecent=[(await db.Character.findByPk(lastID)).toJSON()]
+                console.log(mostRecent)
+                res.render("search", {charRender, mostRecent})
+            }
+            // res.render("create", charRender)
+            // res.json(character)
+        })
 })
 
 router.get("/edit", function (req, res) {
