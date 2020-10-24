@@ -104,6 +104,17 @@ router.post("/api/makechar", function (req, res) {
       };
     }
 
+    // append on all modifiers
+
+    postObj.strMod = Math.floor((postObj.str - 10) / 2);
+    postObj.dexMod = Math.floor((postObj.dex - 10) / 2);
+    postObj.conMod = Math.floor((postObj.con - 10) / 2);
+    postObj.itlMod = Math.floor((postObj.itl - 10) / 2);
+    postObj.wisMod = Math.floor((postObj.wis - 10) / 2);
+    postObj.chaMod = Math.floor((postObj.cha - 10) / 2);
+
+    // remove code between comments if it doesnt work.
+
     console.table(postObj);
 
     const myClassID = parseInt(req.body.class)
@@ -119,6 +130,12 @@ router.post("/api/makechar", function (req, res) {
       itl: postObj.itl,
       wis: postObj.wis,
       cha: postObj.cha,
+      strMod: postObj.strMod,
+      dexMod: postObj.dexMod,
+      conMod: postObj.conMod,
+      itlMod: postObj.itlMod,
+      wisMod: postObj.wisMod,
+      chaMod: postObj.chaMod,
       ClassId: myClassID,
       RaceId: myRaceID,
     }).then(function (dbCharacter) {

@@ -70,14 +70,14 @@ router.get("/characters", function (req, res) {
             return charObj.toJSON()
         })
         console.log(characterJson)
-        characterJson.forEach(element => {
-            element.strMod = Math.floor((element.str - 10) / 2);
-            element.dexMod = Math.floor((element.dex - 10) / 2);
-            element.conMod = Math.floor((element.con - 10) / 2);
-            element.itlMod = Math.floor((element.itl - 10) / 2);
-            element.wisMod = Math.floor((element.wis - 10) / 2);
-            element.chaMod = Math.floor((element.cha - 10) / 2);
-        });
+        // characterJson.forEach(element => {
+        //     element.strMod = Math.floor((element.str - 10) / 2);
+        //     element.dexMod = Math.floor((element.dex - 10) / 2);
+        //     element.conMod = Math.floor((element.con - 10) / 2);
+        //     element.itlMod = Math.floor((element.itl - 10) / 2);
+        //     element.wisMod = Math.floor((element.wis - 10) / 2);
+        //     element.chaMod = Math.floor((element.cha - 10) / 2);
+        // });
         const charRender = { characters: characterJson }
         // console.log(characterJson)
         res.render("allChar", charRender)

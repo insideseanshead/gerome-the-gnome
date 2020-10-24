@@ -38,6 +38,40 @@ module.exports = function(sequelize, DataTypes) {
             type: DataTypes.INTEGER,
             allowNull: false
         }, 
+        strMod: {
+            // Store str scores.
+            type: DataTypes.INTEGER,
+            allowNull: false
+        },
+        dexMod: {
+            // Store dex scores.
+            type: DataTypes.INTEGER,
+            allowNull: false
+        },
+        conMod: {
+            // Store con scores.
+            type: DataTypes.INTEGER,
+            allowNull: false
+        },
+        itlMod: {
+            // Store itl scores.
+            type: DataTypes.INTEGER,
+            allowNull: false
+        },
+        wisMod: {
+            // Store wis scores.
+            type: DataTypes.INTEGER,
+            allowNull: false
+        },
+        chaMod: {
+            // Store cha scores.
+            type: DataTypes.INTEGER,
+            allowNull: false
+        }, 
+        note: {
+            type: DataTypes.TEXT
+        }
+        
         // saveOneID: {
         //     // Store saveOneID scores.
         //     type: DataTypes.STRING,
