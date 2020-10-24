@@ -37,7 +37,7 @@ $("#newChar").on("submit", event => {
 })
 
 
-$("#searchBtn").on("submit", event => {
+$("body").on("click", "#searchBtn", function (event) {
     event.preventDefault();
     console.log('searched!');
     const charID = $('#searchchar').val();
@@ -48,12 +48,12 @@ $("#searchBtn").on("submit", event => {
     else {
         $.ajax({
             method: "GET",
-            url: "/api/search",
-            data: charID
+            url: "/search/"+charID,
         }).then(apiRes => {
             console.log(apiRes);
-            const ajaxID = apiRes.id
-            window.location.href = `/search/$(ajaxID)`
+            // const ajaxID = apiRes.id
+            // window.location.search = "charID=" + apiRes.id 
+            window.location.href = `/search/${charID}`
         })
     }
 })
