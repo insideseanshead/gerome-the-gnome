@@ -28,7 +28,9 @@ router.get("/", function (req, res) {
                 console.log('anything')
                 res.render("create", {charRender})
             } else {
-                const mostRecent=[(await db.Character.findByPk(lastID)).toJSON()]
+                const mostRecent=[(await db.Character.findByPk(lastID, { include: [
+                    db.Class, db.Race
+                ]})).toJSON()]
                 console.log(mostRecent)
                 res.render("create", {charRender,mostRecent})
             }
@@ -65,7 +67,9 @@ router.get("/", function (req, res) {
 // })
 
 router.get("/characters", function (req, res) {
-    db.Character.findAll().then(character => {
+    db.Character.findAll({ include: [
+        db.Class, db.Race
+    ]}).then(character => {
         console.log(character)
         const characterJson = character.map(charObj => {
             return charObj.toJSON()
@@ -120,7 +124,9 @@ router.get("/search/:id", function (req, res) {
                 res.render("search", {charRender})
             } else {
                 console.log("I made it to else");
-                const mostRecent=[(await db.Character.findByPk(lastID)).toJSON()]
+                const mostRecent=[(await db.Character.findByPk(lastID, { include: [
+                    db.Class, db.Race
+                ]})).toJSON()]
                 console.log(mostRecent)
                 res.render("search", {charRender, mostRecent})
             }
