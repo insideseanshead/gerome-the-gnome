@@ -13,21 +13,25 @@
 <body>
   <nav>
     <div class="nav-wrapper">
-      <a href="" class="brand-logo">Logo</a>
+      <a href="/" class="brand-logo center"><img src="gerome-log_header.png" alt="Gerome the Gnome Logo" /></a>
       {{!-- add logo --}}
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-         <li><button><a href="./search">search character</a></button></li>
+      <ul id="nav-mobile" class="right">
+         <li><button class="blue darken-4"><a href="./search">search character</a></button></li>
          {{!-- hrefs to be changed when routes are decided, avoid spaces --}}
-        <li><button><a href="./">create character</a></button></li>
+        <li><button class="blue darken-4"><a href="/">create character</a></button></li>
         {{!-- hrefs to be changed when routes are decided, avoid spaces  --}}
-        <li><button><a href="./characters">all character</a></button></li>
+        <li><button class="blue darken-4"><a href="./characters">all character</a></button></li>
         {{!-- hrefs to be changed when routes are decided, avoid spaces --}}
       </ul>
     </div>
   </nav>
-
+  <div id="content-wrap">
   {{{ body }}} 
-     <footer class="page-footer">
+  </div>
+    <footer>
+          <p class="blue-text text-darken-3">© 2020 Gerome the Gnome</p> 
+    </footer>
+     <!--<footer class="page-footer" style="position:fixed;bottom:0;left:0;width:100%;">
         <div class="container">
             <div class="row">
             <div class=footer-copyright>
@@ -37,7 +41,7 @@
             </div>
             </div>
         </div>
-      </footer>
+      </footer>-->
   <!-- Jquery and base file link for script of navbar, will need other pages scripts below -->
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
