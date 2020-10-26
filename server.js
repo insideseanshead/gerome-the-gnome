@@ -11,6 +11,9 @@ app.use(express.json());
 
 app.use(express.static("public"))
 
+//set up images folder in handlebars
+app.use(express.static('./public/assets/images')); 
+
 //set handlebars as default template
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
