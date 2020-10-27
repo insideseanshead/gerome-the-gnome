@@ -11,37 +11,24 @@
 </head>
 
 <body>
-  <nav>
-    <div class="nav-wrapper">
-      <a href="/" class="brand-logo center"><img src="/assets/images/gerome-log_header.png" alt="Gerome the Gnome Logo" /></a>
-      {{!-- add logo --}}
-      <ul id="nav-mobile" class="right">
-         <li><button class="blue darken-4"><a href="./search">search character</a></button></li>
-         {{!-- hrefs to be changed when routes are decided, avoid spaces --}}
-        <li><button class="blue darken-4"><a href="/">create character</a></button></li>
-        {{!-- hrefs to be changed when routes are decided, avoid spaces  --}}
-        <li><button class="blue darken-4"><a href="./characters">all character</a></button></li>
-        {{!-- hrefs to be changed when routes are decided, avoid spaces --}}
-      </ul>
-    </div>
-  </nav>
+  <div class="nav">
+        <a href="/" class="logo"><img src="/assets/images/gerome-log_header.png" alt="Gerome the Gnome Logo"></a>
+        <div class="navigation_bar">
+          <ul class="navigation">
+            <li><a href="/">Create</a></li>
+            <li><a href="./search">Search</a></li>
+            <li><a href="./characters">All Characters</a></li>
+          </ul>
+        </div>
+  </div>
+  
   <div id="content-wrap">
   {{{ body }}} 
   </div>
     <footer>
-          <p class="blue-text text-darken-3">© 2020 Gerome the Gnome</p> 
+          © 2020 Gerome the Gnome 
     </footer>
-     <!--<footer class="page-footer" style="position:fixed;bottom:0;left:0;width:100%;">
-        <div class="container">
-            <div class="row">
-            <div class=footer-copyright>
-              <h4 class="blue-text text-darken-3">© 2020 Gerome the Gnome</h4>
-                <a class="blue-text text-darken-3" href="https://github.com/insideseanshead/gerome-the-gnome">github</a>
-                <a class="blue-text text-darken-3" href="#!">heroku</a>
-            </div>
-            </div>
-        </div>
-      </footer>-->
+     
   <!-- Jquery and base file link for script of navbar, will need other pages scripts below -->
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
