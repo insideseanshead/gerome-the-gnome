@@ -72,30 +72,7 @@ module.exports = function(sequelize, DataTypes) {
             type: DataTypes.TEXT
         }
         
-        // saveOneID: {
-        //     // Store saveOneID scores.
-        //     type: DataTypes.STRING,
-        //     allowNull: false
-        // },
-        // modOne: {
-        //     type: DataTypes.INTEGER,
-        //     allowNull: false
-        // },
-        // saveTwoID: {
-        //     // Store saveOneID scores.
-        //     type: DataTypes.INTEGER,
-        //     allowNull: false
-        // },
-        // modTwo: {
-        //     type: DataTypes.INTEGER,
-        //     allowNull: false
-        // }
-        // ,
-        // classID: {
-        //     type: sequelize.INTEGER,
-        //     references: {model: "Class",key: "id"},
-            
-        // }
+        
     })
     Character.associate = function(models) {
         // add associations here
