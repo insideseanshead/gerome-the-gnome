@@ -14,10 +14,7 @@
         <!-- To be dynamically built in the future using the race table -->
         <select class="browser-default" id="race">
           <option value="" disabled selected>Race</option>
-        <!-- <option value="0">Human</option>
-          <option value="1">Dwarf</option>
-          <option value="2">Elf</option>
-          <option value="3">Halfling</option> -->
+        
           {{#each races}}
           <option value={{id}}>{{raceType}}</option>
           {{/each}}

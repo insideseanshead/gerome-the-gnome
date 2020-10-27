@@ -2,7 +2,6 @@ body{
     background-image: url("/assets/images/dice.png");
     background-color: #6466aa;
     font-family: 'Grenze Gotisch', cursive; 
-    /* add a background-image of Gernome to the right of the table possible faded or an outline*/
     color:#6466aa; 
     text-align:center; 
     display: flex;
@@ -14,19 +13,51 @@ body{
     flex: 1 0 auto;
   }
 
-nav{
+.nav{
     background-image: url(https://img.freepik.com/free-vector/abstract-gray-geometric-pattern-background_1035-18654.jpg?size=626&ext=jpg);
     color: rgb(0, 204, 255); 
     min-height: 250px;
+}
+
+.navigation{
+  list-style-type: none;
+  margin: auto;
+  padding: 0;
+  width: 360px;
+  overflow: hidden;
+  background-color: #333333;
+}
+
+.navigation_bar{
+  margin: auto;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333333;
+}
+
+.navigation li{
+  float: left;
+  text-align: right;
+  font-size: 24px;
+}
+
+.navigation li a{
+  display: block;
+  color: white;
+  text-align: center;
+  padding:8px 20px;
+  text-decoration: none;
+}
+
+.navigation li a:hover{
+  background-color: #111111;
 }
 
 .container{
     position: relative;
     min-height: 90%;
     text-align: center;
-    /* border-radius: 25px; */
     padding: 5px 5x;
-    /* height: fit-content; */
     width: fit-content;
     justify-content: center;
     margin-top: 10px ;
@@ -50,21 +81,17 @@ nav{
   }
   
   .btn:hover {
-    /* background-image:url(https://www.shopsteins.com/prodimages/15319-DEFAULT-l.jpg); */
     background-size: cover; 
-    
-    
   }
 
-  
   footer{
     position: fixed;
     left:0;
     bottom: 0;
     width: 100%;
     text-align: center; 
-    background-color: #7d99b6;
-    height: 40px;
+    background-color: #333333;
+    height: 20px;
     margin-top: 20px;
   }
 
@@ -72,7 +99,6 @@ nav{
       padding:10px; 
       background:beige; 
       border:1px solid; 
-      /* line-height:60px;  */
       text-align:center; 
   }
 
