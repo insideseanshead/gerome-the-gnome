@@ -66,43 +66,17 @@ const races = [
         itlBonus: 0,
         wisBonus: 0,
         chaBonus: 0
+    },
+    {
+        raceType: "gnome",
+        strBonus: 0,
+        dexBonus: 0,
+        conBonus: 0,
+        itlBonus: 2,
+        wisBonus: 0,
+        chaBonus: 0
     }
 ]
 db.sequelize.sync({ force: true }).then(function() {
     return Promise.all([db.Class.bulkCreate(classes),db.Race.bulkCreate(races)])
   });
-// db.Class.bulkCreate([
-//     {
-//         title: "Fighter",
-//         saveOneName: "str",
-//         saveOneAtt: 2,
-//         saveTwoName: "con",
-//         saveTwoAtt: 2
-//     },
-//     {
-//         title: "Rogue",
-//         saveOneName: "str",
-//         saveOneAtt: 2,
-//         saveTwoName: "con",
-//         saveTwoAtt: 2
-//     },
-//     {
-//         title: "Wizard",
-//         saveOneName: "str",
-//         saveOneAtt: 2,
-//         saveTwoName: "con",
-//         saveTwoAtt: 2
-//     },
-//     {
-//         title: "Cleric",
-//         saveOneName: "str",
-//         saveOneAtt: 2,
-//         saveTwoName: "con",
-//         saveTwoAtt: 2
-//     }
-    
-// ]).then(function(classDB){
-//     db.Race.bulkCreate([
-
-//     ])
-// })

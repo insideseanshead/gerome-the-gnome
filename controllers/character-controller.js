@@ -113,14 +113,14 @@ router.post("/api/makechar", function (req, res) {
     postObj.wisMod = Math.floor((postObj.wis - 10) / 2);
     postObj.chaMod = Math.floor((postObj.cha - 10) / 2);
 
-    // remove code between comments if it doesnt work.
+    
 
     console.table(postObj);
 
     const myClassID = parseInt(req.body.class)
     const myRaceID = parseInt(req.body.race)
     console.log(req.body);
-    // =========================
+    
     db.Character.create({
       first_name: firstName,
       last_name: lastN,
@@ -210,8 +210,7 @@ router.delete("/api/delete/:id", (req, res) => {
 });
 
 router.put("/api/edit/:id", (req, res) => {
-  // console.log(req.params.id);
-  // console.log(req.body.note);
+  
 
   db.Character.update({
     note: req.body.note
@@ -225,6 +224,95 @@ router.put("/api/edit/:id", (req, res) => {
     res.status(500).send("Encounted an error with update")
   })
 })
+
+// =====================================
+// Seed Data Goes Here
+router.get("/api/seeds",(req,res)=>{
+  const classes = [
+    {
+        title: "fighter",
+        saveOneName: "str",
+        saveOneAtt: 2,
+        saveTwoName: "con",
+        saveTwoAtt: 2
+    },
+    {
+        title: "rogue",
+        saveOneName: "dex",
+        saveOneAtt: 2,
+        saveTwoName: "itl",
+        saveTwoAtt: 2
+    },
+    {
+        title: "wizard",
+        saveOneName: "itl",
+        saveOneAtt: 2,
+        saveTwoName: "wis",
+        saveTwoAtt: 2
+    },
+    {
+        title: "cleric",
+        saveOneName: "wis",
+        saveOneAtt: 2,
+        saveTwoName: "cha",
+        saveTwoAtt: 2
+    }
+]
+
+const races = [
+    {
+        raceType: "human",
+        strBonus: 1,
+        dexBonus: 1,
+        conBonus: 1,
+        itlBonus: 1,
+        wisBonus: 1,
+        chaBonus: 1
+    },
+    {
+        raceType: "dwarf",
+        strBonus: 0,
+        dexBonus: 0,
+        conBonus: 2,
+        itlBonus: 0,
+        wisBonus: 0,
+        chaBonus: 0
+    },
+    {
+        raceType: "elf",
+        strBonus: 0,
+        dexBonus: 2,
+        conBonus: 0,
+        itlBonus: 0,
+        wisBonus: 0,
+        chaBonus: 0
+    },
+    {
+        raceType: "halfling",
+        strBonus: 0,
+        dexBonus: 2,
+        conBonus: 0,
+        itlBonus: 0,
+        wisBonus: 0,
+        chaBonus: 0
+    },
+    {
+        raceType: "gnome",
+        strBonus: 0,
+        dexBonus: 0,
+        conBonus: 0,
+        itlBonus: 2,
+        wisBonus: 0,
+        chaBonus: 0
+    }
+]
+  db.Class.bulkCreate(classes).then(data => {
+    db.Race.bulkCreate(races).then(results =>{
+      res.send("seeded")
+    })
+  })
+})
+// ====================================
 
 
 module.exports = router;
