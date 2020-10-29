@@ -46,15 +46,15 @@ $("body").on("click", "#searchBtn", function (event) {
         // Consider appending
     }
     else {
-        $.ajax({
-            method: "GET",
-            url: "/search/"+charID,
-        }).then(apiRes => {
-            console.log(apiRes);
-            // const ajaxID = apiRes.id
-            // window.location.search = "charID=" + apiRes.id 
+        // $.ajax({
+        //     method: "GET",
+        //     url: "/search/"+charID,
+        // }).then(apiRes => {
+        //     console.log(apiRes);
+        //     // const ajaxID = apiRes.id
+        //     // window.location.search = "charID=" + apiRes.id 
             window.location.href = `/search/${charID}`
-        })
+        // })
     }
 })
 

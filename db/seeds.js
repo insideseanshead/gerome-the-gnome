@@ -27,6 +27,13 @@ const classes = [
         saveOneAtt: 2,
         saveTwoName: "cha",
         saveTwoAtt: 2
+    },
+    {
+        title: "Monk",
+        saveOneName: "str",
+        saveOneAtt: 2,
+        saveTwoName: "dex",
+        saveTwoAtt: 2
     }  
 ]
 
