@@ -107,7 +107,7 @@ User authentication so that way the user has complete control over notes added t
 
 ## Changelog
 
-2020-10-29: fixed seach page pug, and centered drop down on search page, Tested functionaility locally pushing main for heroku update.  
+2020-10-29: fixed seach page bug, and centered drop down on search page, Tested functionaility locally pushing main for heroku update.  
 
 2020-10-26: Create Gerome-the-Gnome art assets,  Bug fixing of search page, character partials include race and class type,  Nav bar styling, website gif highlights.  
 
