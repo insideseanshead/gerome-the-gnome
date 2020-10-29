@@ -1,8 +1,9 @@
 <div class="container">
   {{#with charRender }}
-  <h1>Search Character</h1>
+  <h1 class="white-text">Search Character</h1>
   <div class="row">
-    <div class="input-field col s10">
+    <form>
+    <div class="input-field col s12">
       <select class="browser-default" id="searchchar">
         <option value="" disabled selected>Select Character</option>
         {{#each characters}}
@@ -11,8 +12,10 @@
         <label>Select Character</label>
       </select>
     </div>
+    <a class="btn col s12" id="searchBtn"><i class="material-icon center">Search</i></a>
+    </form>
   </div>
-  <a class="btn-large col s2" id="searchBtn"><i class="material-icon right">Search</i></a>
+  {{!-- <a class="btn-large col s12" id="searchBtn"><i class="material-icon center">Search</i></a> --}}
   {{/with}}
   {{#if mostRecent }}
     {{#each mostRecent}}
