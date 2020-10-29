@@ -105,9 +105,9 @@ Aslan Ghodsian Helped with the seeding of the live database.
 User authentication so that way the user has complete control over notes added to a character and deleting a character. The addition of more races such as gnome, dragonborn, half-elf, half-orce, and tiefling.  The addition of more classes such as commoner, guard , noble, and veteran.  User ability to edit character name.  Adding of saving throws row based on class.
 
 
-## Changelog
+## Change log
 
-2020-10-29: fixed seach page bug, and centered drop down on search page, Tested functionaility locally pushing main for heroku update.  
+2020-10-29: Fixed seach page bug, and centered drop down on search page, Tested functionaility locally pushing main for heroku update.  
 
 2020-10-26: Create Gerome-the-Gnome art assets,  Bug fixing of search page, character partials include race and class type,  Nav bar styling, website gif highlights.  
 
